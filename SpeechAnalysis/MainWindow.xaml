@@ -1,0 +1,25 @@
+﻿<Window x:Class="SpeechWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpeechWPF"
+        mc:Ignorable="d"
+        Title="Speech Analysis App" Height="305.882" Width="525"
+        Name="mainWindow" Closed="MainWindow_Closed" FontFamily="Global User Interface" Background="#FFCDCDCD">
+    <Grid x:Name="Grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="74.961"></RowDefinition>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Name ="m_InputText" Text="{Binding ElementName=mainWindow, Path=m_RecordedText.Text}" Grid.Row="1" Margin="30,0,30,49" Background="#FFD4D4D4" FontSize="14"/>
+        <TextBox Name="m_FeelingsText" HorizontalAlignment="Left" Height="55" Margin="30,1,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="457" Background="#FFD4D4D4" BorderBrush="#FFD4D4D4" FontSize="14"/>
+        <Label Content="Speech Analysis" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Arial" Height="38" Width="200"/>
+        <Label Content="Recorded:" HorizontalAlignment="Left" Margin="30,51,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" Height="24" Width="69"/>
+        <Label Content="Analysis:" HorizontalAlignment="Left" Margin="30,91,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" Grid.Row="1" Height="24" Width="63"/>
+        <Button Name="m_AnalizeButton" Content="Run" HorizontalAlignment="Left" Margin="98,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="m_AnalizeButton_Click" Height="20" FontWeight="Bold"/>
+        <Label Content="(say a short phrase)" HorizontalAlignment="Left" Margin="100,51,0,0" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="120"/>
+    </Grid>
+</Window>
